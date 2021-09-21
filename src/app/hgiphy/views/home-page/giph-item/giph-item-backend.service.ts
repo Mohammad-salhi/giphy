@@ -6,9 +6,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root',
 })
 export class GiphItemBackendService {
-  constructor(
-    private httpService: HttpClient
-  
+  constructor(private httpService: HttpClient
   ) {}
 
   getItemDetails(itemId?: any): Observable<any> {

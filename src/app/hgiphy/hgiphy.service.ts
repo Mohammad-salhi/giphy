@@ -6,7 +6,6 @@ import {EventEmitter, Injectable} from '@angular/core';
 export class HGiphyService {
     public serachInputEmitter = new EventEmitter<any>();
     constructor() {
-
     }
     
 }

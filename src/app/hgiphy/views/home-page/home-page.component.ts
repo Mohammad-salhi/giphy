@@ -69,10 +69,7 @@ export class HomePageComponent implements OnInit {
     let url ='HGiphy/'
     url = url.concat(item.id).concat("/details")
     this.route.navigate([url]);
-
-
     this.homePageViewService.selectedGiphId = item.id
     }
   
-
 }

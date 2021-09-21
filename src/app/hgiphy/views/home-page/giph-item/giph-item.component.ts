@@ -23,8 +23,6 @@ export class GiphItemComponent implements OnInit, OnDestroy {
   constructor(private hGiphyService : HGiphyService,
               private giphItemBackendService: GiphItemBackendService,
               private activatedRoute : ActivatedRoute,
-
-
   ) { }
 
   ngOnInit(): void {
@@ -66,7 +64,6 @@ export class GiphItemComponent implements OnInit, OnDestroy {
       this.comments = commentsObj[this.selectedItem.id]
       //there seems to be a problem with html code rendering data to the item comments
       // though there are retrieved correctly for each id, i.e the following log
-      
       console.log(this.comments)
     }
   }
@@ -80,7 +77,7 @@ export class GiphItemComponent implements OnInit, OnDestroy {
     }
 
     if (commentsObj.hasOwnProperty(this.selectedItem.id)) {
-       commentsObj[this.selectedItem.id].push(commentObj)
+      commentsObj[this.selectedItem.id].push(commentObj)
     }
     else {
       commentsObj[this.selectedItem.id] = []
