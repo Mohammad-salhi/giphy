@@ -1,0 +1,42 @@
+<div class="container">
+    <div class="row p-2">
+        <div class="d-flex flex-row row-hl">
+            <div class="p-1 item-hr" >
+                <h3 >
+                    HGiphy
+                </h3>
+            </div>
+            <div class="p-1 item-hl" style="margin-left: auto; order: 1; padding-top :10px !important" >
+                <a class="anchor-class" (click)="onGoToHomePage()"> 
+                Home
+                </a>
+
+            </div>
+
+            <div class="p-1 item-hl" style="order: 2 ;padding-top :10px !important" >
+                <a  class="anchor-class" >
+                Random 
+                </a>
+
+            </div>
+            <div class="p-1 item-hl" style=" order: 3; padding-top :10px !important">
+                <div class="form-group">
+                    <input 
+                        type="text"
+                        style="font-family:Arial, FontAwesome ;padding-left:5px"
+                        placeholder="&#xF002; Search"
+                        [(ngModel)]="searchInput" 
+                        (change)="onSearchInputChanged()"
+                        ngDefaultControl>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+    
+    <div class="p-2 ">
+        <router-outlet> </router-outlet>     
+    </div>
+</div>
+

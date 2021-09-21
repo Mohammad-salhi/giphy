@@ -1,0 +1,16 @@
+<ng-container *ngIf="giphys">
+    <div *ngFor="let item of giphys" class="card border-success m-2 giphClass" style="width: 400px;" >
+        <div class="card-body" style="min-height: auto">
+            <a (click)="onGiphItemClicked(item)" style="cursor: pointer;">
+                <img [src]="getItemUrl(item.url)" alt="item.title" class="mt-1" style="display: flex; margin: auto;">
+                <h5  style="text-align: center;">
+                    By {{item.userName}}, {{item.trendingDatetime}}
+                </h5>
+            </a> 
+        </div>
+
+    </div>
+</ng-container>
+
+
+<router-outlet></router-outlet>
